@@ -90,10 +90,7 @@ def app():
         st.write(
             "3. Performs Sentiment Analysis using TextBlob a displays it in form of a Bar Graph"
         )
-        st.write(
-            "4. Performs Sentiment Analysis a displays it in form of a Bar Graph using IMDB Logistic Regression Method"
-        )
-
+        
         raw_text = st.text_area("Enter the exact twitter handle to study (without @)")
 
         Analyzer_choice = st.selectbox(
@@ -101,8 +98,7 @@ def app():
             [
                 "Show Recent Tweets",
                 "Generate WordCloud",
-                "Visualize the Sentiment Analysis (TextBlob)",
-                "Visualize the Sentiment Analysis (IMDB Logistic Regression Method)",
+                "Visualize the Sentiment Analysis (TextBlob)"
             ],
         )
 
@@ -170,7 +166,7 @@ def app():
 
                 st.image(img)
 
-            elif Analyzer_choice == "Visualize the Sentiment Analysis (TextBlob)":
+            else:
 
                 def Plot_Analysis():
 
@@ -230,59 +226,7 @@ def app():
 
                 st.pyplot(use_container_width=True)
 
-            else:
-
-                def Plot_Analysis():
-
-                    st.success(
-                        "Generating Visualisation for Sentiment Analysis using Logistic Regression model trained on IMDB Dataset"
-                    )
-
-                    posts = api.user_timeline(
-                        screen_name=raw_text,
-                        count=200,
-                        lang="en",
-                        tweet_mode="extended",
-                    )
-
-                    df = pd.DataFrame(
-                        [tweet.full_text for tweet in posts], columns=["Tweets"]
-                    )
-
-                    # Create a function to clean the tweets
-                    def cleanTxt(text):
-                        text = re.sub("@[A-Za-z0–9]+", "", text)  # Removing @mentions
-                        text = re.sub("#", "", text)  # Removing '#' hash tag
-                        text = re.sub("RT[\s]+", "", text)  # Removing RT
-                        text = re.sub("https?:\/\/\S+", "", text)  # Removing hyperlink
-
-                        return text
-
-                    # Clean the tweets
-                    df["Tweets"] = df["Tweets"].apply(cleanTxt)
-
-                    # Clean the tweets
-                    df["Tweets"] = df["Tweets"].apply(cleanTxt)
-
-                    logistic_regression = pickle.load(open("logistic.pkl", "rb"))
-
-                    cv = pickle.load(open("tfidf_logistic.pkl", "rb"))
-
-                    dtm = cv.transform(df.Tweets)
-
-                    df["sentiment_score_imdb"] = logistic_regression.predict(dtm)
-
-                    df["sentiment_score_imdb"] = df["sentiment_score_imdb"].map(
-                        {1: "Positive", 0: "Negative"}
-                    )
-
-                    return df
-
-                df = Plot_Analysis()
-
-                st.write(sns.countplot(x=df["sentiment_score_imdb"], data=df))
-
-                st.pyplot(use_container_width=True)
+            
 
     else:
 
