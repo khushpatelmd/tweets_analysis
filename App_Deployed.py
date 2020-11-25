@@ -67,7 +67,7 @@ def app():
 
     warnings.filterwarnings("ignore")
 
-    st.set_option("deprecation.showPyplotGlobalUse", False)
+    
 
     st.title(
         "PH 1977 Dr. Yaseen SPH  HW 3: Tweet sentiment analysis and topic modeling"
