@@ -70,7 +70,7 @@ def app():
     
 
     st.title(
-        "PH 1977 Dr. Yaseen SPH  HW 3: Tweet sentiment analysis and topic modeling"
+        "Tweet sentiment analysis and topic modeling"
     )
 
     activities = ["Tweet Sentiment Analysis", "Topic Modeling"]
