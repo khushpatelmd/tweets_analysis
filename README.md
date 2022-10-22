@@ -1,4 +1,4 @@
-# Sentiment Analysis and topic modeling of tweets
+# Sentiment Analysis and Topic Modeling of Tweets
 
 Author: Khush Patel, drpatelkhush@gmail.com
 
