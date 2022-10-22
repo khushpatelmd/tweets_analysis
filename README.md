@@ -8,7 +8,7 @@ Author: Khush Patel, drpatelkhush@gmail.com
 
 In the modern era, tweets provide useful information. When unstructured lines of text in tweets are analyzed, a lot of direct and indirect information can be acquired. The information gathered can be utilized to create action plans to enhance how society perceives an organization. Additionally, information on what individuals believe and feel about a subject can be acquired; this knowledge can then be used to inform the development of goods or policies that address the subject. Briefly said, every firm can get useful information from analyzing tweets.
 
-An app based on streamlit is developed and deployed on heroku which takes any twitter handle and analysis the tweets from the handle.
+An app based on streamlit is developed and deployed on Heroku which takes any twitter handle and analysis the tweets from the handle.
 
 # Table Of Contents
 
@@ -58,7 +58,7 @@ Topic Modeling by LDA and NMF showed almost similar results which was surprising
 
 <hr>
 
-5. Deployment: Web app can be made using streamlit and deployed on heroku to run the analysis live. User can input any twitter handle and all the above mentioned analysis would be performed.
+5. Deployment: Web app can be made using streamlit and deployed on Heroku to run the analysis live. User can input any twitter handle and all the above mentioned analysis would be performed.
 
 <hr>
 
@@ -81,7 +81,7 @@ Topic Modeling by LDA and NMF showed almost similar results which was surprising
 │      └──Topic modeling: Divide tweets into topics and identifying main topics in each category.
 │
 ├── app_deployment
-      └──Files to deploy streamlit app on heroku
+      └──Files to deploy streamlit app on Heroku
 ```
 
 <hr />
