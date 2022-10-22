@@ -1,0 +1,26 @@
+[W 11:43:04.341 NotebookApp] Error loading server extension jupyter_nbextensions_configurator
+    Traceback (most recent call last):
+      File "/home/kpatel38_dell/anaconda3/envs/twitter/lib/python3.8/site-packages/notebook/notebookapp.py", line 2026, in init_server_extensions
+        mod = importlib.import_module(modulename)
+      File "/home/kpatel38_dell/anaconda3/envs/twitter/lib/python3.8/importlib/__init__.py", line 127, in import_module
+        return _bootstrap._gcd_import(name[level:], package, level)
+      File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+      File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+      File "<frozen importlib._bootstrap>", line 973, in _find_and_load_unlocked
+    ModuleNotFoundError: No module named 'jupyter_nbextensions_configurator'
+[I 11:43:04.343 NotebookApp] Serving notebooks from local directory: /mnt/d/Projects/ml_topic_modeling
+[I 11:43:04.343 NotebookApp] Jupyter Notebook 6.5.1 is running at:
+[I 11:43:04.343 NotebookApp] http://localhost:5555/
+[I 11:43:04.344 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[E 11:43:10.983 NotebookApp] Could not open static file ''
+[W 11:43:11.048 NotebookApp] 404 GET /static/components/jquery-ui/themes/smoothness/jquery-ui.min.css (127.0.0.1) 5.320000ms referer=http://localhost:5555/tree?
+[W 11:43:12.479 NotebookApp] 404 GET /nbextensions/nbextensions_configurator/tree_tab/main.js?v=20221022114304 (127.0.0.1) 2.630000ms referer=http://localhost:5555/tree?
+[W 11:43:37.672 NotebookApp] 404 GET /static/components/jquery-ui/themes/smoothness/jquery-ui.min.css (127.0.0.1) 1.120000ms referer=http://localhost:5555/notebooks/twitter.ipynb
+[W 11:43:38.662 NotebookApp] Notebook twitter.ipynb is not trusted
+[I 11:43:38.995 NotebookApp] Kernel started: 612ecbf0-5454-47a4-a23a-e4895bee0da8, name: python3
+[W 11:43:39.541 NotebookApp] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20221022114304 (127.0.0.1) 1.440000ms referer=http://localhost:5555/notebooks/twitter.ipynb
+[W 11:43:40.416 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20221022114304 (127.0.0.1) 1.040000ms referer=http://localhost:5555/notebooks/twitter.ipynb
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.control
+[IPKernelApp] WARNING | No such comm: 72d8e876-d153-4ae2-bf82-0090cee88439
+[I 11:45:38.995 NotebookApp] Saving file at /twitter.ipynb
+[I 13:34:07.994 NotebookApp] Starting buffering for 612ecbf0-5454-47a4-a23a-e4895bee0da8:352347cd5f0049e78f16e73ca41503c8

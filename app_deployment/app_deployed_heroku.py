@@ -1,8 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
+# Imports
 
 # Python imports
 import pandas as pd
@@ -36,17 +32,11 @@ from sklearn.metrics import classification_report
 from sklearn.decomposition import LatentDirichletAllocation
 from sklearn.decomposition import NMF
 
-
-# In[2]:
-
-
-Bearer_token = "AAAAAAAAAAAAAAAAAAAAAIw7KAEAAAAA8sB30bk6YmLoZ44O4SYsnVm77Xo%3Du7pjIJXUUR9yCgXFa68CGtT89DJHnRf06RHfUPJTmcdBiSzluZ"
-
-API_key = "6YwLm5RrFM2svJwZo2CSXCpbS"
-API_secret_key = "bKvPXAG8tHy0qEzazgEX8rqqrcqspKWfqpJKn03ESBOBuxhgFg"
-
-access_token = "1027516755198009345-alcKwxRGMibuhplbS1wx47fnmaUkik"
-access_token_secret = "avl6MD9anfLIKgALs14JEohXN7NfuDN6cmm9YRvLpT593"
+Bearer_token = ""
+API_key = ""
+API_secret_key = ""
+access_token = ""
+access_token_secret = ""
 
 # Create the authentication object
 authenticate = tweepy.OAuthHandler(API_key, API_secret_key)
@@ -58,11 +48,8 @@ authenticate.set_access_token(access_token, access_token_secret)
 api = tweepy.API(authenticate, wait_on_rate_limit=True)
 
 
-# In[ ]:
-
-
 def app():
-
+  
     import warnings
 
     warnings.filterwarnings("ignore")
@@ -381,10 +368,8 @@ def app():
 
                 st.write(Top_5_words)
 
-    st.subheader("Khush Patel, Khush.A.Patel@uth.tmc.edu")
+    st.subheader("Khush Patel, drpatelkhush@gmail.com")
 
 
 if __name__ == "__main__":
     app()
-
-
